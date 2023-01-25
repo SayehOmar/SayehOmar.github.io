@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html style="background-color:#FFFCFB;">
+    <head>
+        
+        <meta charset="utf-8"/>
+        <title>My Portfolio</title>
+     
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <script src="https://kit.fontawesome.com/f77ee825b3.js" crossorigin="anonymous"></script>
+           
+        <link rel="stylesheet" href="C:\Users\sayeh omar\Desktop\project\CSS\styless.css">
+    
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="left-side">
+                    <div class="nav-link-wrapper">
+                        <a href="gallery.html">Gallery</a>
+                    </div>
+                    
+        
+                    <div class="nav-link-wrapper">
+                        <a href="about.html">About</a> 
+                    </div>
+                </div>
+             
+
+                <div class="right-side">
+                    <div class="brand">
+                        <div>Sayeh Omar</div>
+                    </div>
+                 </div>
+         </div>
+
+
+
+         <div class="content-wrapper">
+            <div class="two-colmun-wrapper">
+                
+
+                <div class="profile-img-wrapper">
+                    
+                    <img src="C:\Users\sayeh omar\Desktop\project\Images\Omar sayeh.png">
+
+                </div>
+                 
+                <div class="profile-content-wrapper">
+                    <div class="Header-text">
+                        
+                        <h1>Hi , I'm <span>Sayeh Omar</span><br> from Tunisia </h1>
+                    </div>
+                    <div class="about-wrapper">
+                        <p class="about-links active-links" onclick="opentab('Education')">Education </p>
+                        <p class="about-links" onclick="opentab('Projects')">Projects </p>
+                        <p class="about-links" onclick="opentab('Hobbies')">Hobbies </p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Education">
+                        <ul>
+                            <li><span>I graduated from high school in 2019. </span></li>
+                            <li><span>Currently a senior year Geomatics student <br> at the Faculty of science Tunis. </span></li>
+                        </ul>
+                    </div>    
+                    <div class="tab-contents" id="Projects">
+                        <ul>
+                            <li><span> I am good with technology due to my field of studies and <br> my curiosity to learn new things. </span></li>
+                            <li><span>I have created several projects for college assignments <br> or for private use utilising  tools like. <b>JupyterENV, NodeJS,ARCGIS, QGIS. </span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Hobbies">
+                        <ul>
+                            <li><span>I am a member of the JCI Ariana. </span></li>
+                            <li><span>I am also a great artist and a graphic designer. <br> I have worked on freelance and with a radio studio. </span></li>
+                        </ul>
+
+                    </div>
+                    
+                    
+
+                </div>
+                
+        
+                
+
+
+            </div>
+            <div id="Work">
+                <div class="container">
+                    <p class="sub-title" style="padding: 60px; text-align: center; font-size: 60px;">My Work </p>
+                    <div class="work-list">
+                        <div class="prj1">
+                            <img src="Images/marlyn monroe.jpg" >
+                            <div class="layer">
+                                <h3>MY GALLERY</h3>
+                                <a href="gallery.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+
+                        </div>
+                        <div class="prj">
+                            <img src="Images/278202134_278883537794364_9066445372501678016_n.jpg" >
+                            <div class="layer">
+                                <h3>GEOMATICS</h3>
+                                <a href="https://github.com/SayehOmar/GIS"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            </div>
+            <div id="contact"> 
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                        <h1 class="subtitle" style="color:  black;">Contact me </h1>
+                        <p><i class="fa-regular fa-envelope"></i>sayehomar03@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>24674352</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/omar.sayeh.1920/"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/Sayeh_Omvr"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/sayeh_omar/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/omar-sayeh-a0277b209/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/omar-sayeh-a0277b209/"><i class="fa-solid fa-file"></i></a>
+                        </div>
+                            
+                        </div>
+                        <div class="contact-right">
+                            <form name="submit-to-google-sheet">
+                                <input type="text" name="Name" placeholder="Your Name" required>                                
+                                <input type="Email" name="Email" placeholder="Your Email" required>
+                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                <button class="btn" type="submit" >Submit</button>
+                                <button class="btn1" onclick="window.location.reload();" > Clear</button>
+
+                            </form>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+    </div>
+
+    </body>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwzxu7oOPhC139ELaLZOuFZ4bnY3dH6VO2sqZ5-uEJazaJBFI7hBNxBLkfsqlzK38fOHA/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    <script>
+        var tablinks = document.getElementsByClassName('about-links ');
+        var tabcontents  = document.getElementsByClassName('tab-contents');
+        function opentab(tabname){
+            for(tablink of tablinks) {
+                tablink.classList.remove('active-links');
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-links');
+            document.getElementById(tabname).classList.add('active-tab');
+            
+
+        }
+        
+
+
+
+    </script>
+  
+    
+</html>
