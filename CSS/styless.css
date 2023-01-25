@@ -385,8 +385,25 @@ form input,form textarea{
     text-decoration:none;
     text-shadow:0px 1px 0px #b23e35;
 }
+.btn1 {
+    background-color:black;
+    border-radius:5px;
+    border:1px solid #ffffff;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    padding:12px 25px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #b23e35;
+}
 
 .btn:hover {
+    background-color:aquamarine;
+color: white;
+}
+.btn1:hover {
     background-color:aquamarine;
 color: white;
 }
